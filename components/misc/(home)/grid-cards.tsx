@@ -1,13 +1,15 @@
 import { LinksCard } from "@/components/misc/(home)/cards/links-card";
 import { StacksCard } from "@/components/misc/(home)/cards/stacks-card";
-// Import the new cards directly
+// Import the Work and Resume cards directly
 import { ResumeCard } from "./cards/resume-card";
+import { WorkCard } from "./cards/work-card";
 
 export const GridCards = () => {
   return (
     <div className="mt-8">
       {/* Top Row: Work and Resume */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-48 md:h-52">
+        <WorkCard />
         <ResumeCard />
       </div>
 

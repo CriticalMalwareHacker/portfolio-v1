@@ -6,14 +6,13 @@ import Header from "@/components/layouts/header";
 import { ThemeProvider } from "@/components/misc/(theme)/theme-provider";
 import { Analytics } from "@/components/misc/analytics";
 import { Toaster } from "@/components/ui/sonner";
-import gradientImg from "@/public/images/gradient.webp";
-import Image from "next/image";
+import PixelBlast from "@/components/PixelBlast"; // Import PixelBlast
 
 const inter = Inter({ subsets: ["latin"] });
 
 const info = {
   name: "Tanay Kumar",
-  twitter: "@CriticalMalwareHacker", // or your actual Twitter handle
+  twitter: "@CriticalMalwareHacker",
   description: "B.Tech IT Student at NMIMS | Web Dev & UI/UX",
   url: "https://blogy.tech",
   image: "/meta/meta.png",
@@ -58,19 +57,21 @@ export default function RootLayout({ children }: ChildrenProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="container max-w-3xl mx-auto min-h-screen flex flex-col px-4 py-5">
+          {/* PixelBlast Background - Fixed covering the screen */}
+          <div className="fixed inset-0 -z-10 pointer-events-auto">
+             <PixelBlast 
+               color="#6366f1" // Indigo-500 color (adjust as needed)
+               pixelSize={4} 
+               className="w-full h-full opacity-15 dark:opacity-40"
+             />
+          </div>
+
+          <div className="container max-w-3xl mx-auto min-h-screen flex flex-col px-4 py-5 relative z-10">
             <div className="flex-1">
               <Header />
               {children}
             </div>
             <Footer />
-            <Image
-              className="absolute left-0 md:left-1/2 top-0 -z-10 -translate-x-1/2 lg:scale-100 object-cover w-full"
-              src={gradientImg}
-              role="presenation"
-              alt="Gradient background"
-              priority
-            />
           </div>
           <Toaster />
         </ThemeProvider>

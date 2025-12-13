@@ -1,172 +1,198 @@
-import type { Metadata } from "next";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "vimfn // work",
-  description: "Find a list of all my projects here.",
-};
-
-const workPage = () => {
+export default function WorkPage() {
   return (
     <section>
-      <div className="pb-10">
-        <h1 className="text-2xl font-bold pb-8">Work</h1>
-        Most of my projects are written either to meet my own needs or for the
-        fun of implementing them myself. There are quite a few interesting
-        things I plan to do yet.
-        <br />
-        <br />
-        <p>
-          Always happy to discuss new ideas — hit me a up at
-          <a
-            href="http://x.com/vimfnx"
-            className="link ml-1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @vimfnx
-          </a>
-          {""}.
-        </p>
+      <h1 className="text-3xl font-bold pb-2">Featured Work</h1>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-10">
+        A selection of projects focusing on AI integration, full-stack development, and user-centric design.
+      </p>
+      
+      {/* Top 3 Projects - Expanded */}
+      <div className="space-y-16 mb-20">
+        
+        {/* Project 1: Quizzora */}
+        <div className="flex flex-col gap-4">
+           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+             <div className="flex items-center gap-3">
+               <h2 className="text-2xl font-bold">Quizzora</h2>
+               <Badge variant="secondary" className="text-xs font-normal">Full Stack AI Platform</Badge>
+             </div>
+             <div className="flex gap-3 text-sm">
+               <a href="https://quizzora-supa.vercel.app" target="_blank" className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                 <ExternalLink size={16} /> Live Demo
+               </a>
+               <a href="https://github.com/CriticalMalwareHacker/quizzora-supa" target="_blank" className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                 <Github size={16} /> Repository
+               </a>
+             </div>
+           </div>
+           
+           <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+             A comprehensive, AI-powered quiz platform developed to streamline assessment creation. Leveraging <strong>OpenAI's GPT-4o-mini</strong>, it allows users to instantly generate complex quizzes from simple text prompts. Features include a robust manual editor, secure <strong>Supabase Authentication</strong> (Email/Password & OAuth), and a dynamic player interface with real-time scoring.
+           </p>
+
+           <div className="bg-zinc-50 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
+             <h3 className="text-sm font-semibold mb-3 text-zinc-900 dark:text-zinc-100">Key Technical Features:</h3>
+             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-600 dark:text-zinc-400 mb-4">
+               <li className="flex items-center gap-2">🔹 AI-Driven Content Generation (OpenAI API)</li>
+               <li className="flex items-center gap-2">🔹 Real-time Leaderboards & Analytics</li>
+               <li className="flex items-center gap-2">🔹 Secure Role-based Authentication</li>
+               <li className="flex items-center gap-2">🔹 Interactive Framer Motion Animations</li>
+             </ul>
+             
+             <div className="flex flex-wrap gap-2 mt-2">
+               {["Next.js 14", "TypeScript", "React", "Supabase", "PostgreSQL", "OpenAI API", "Tailwind CSS", "Shadcn UI", "Framer Motion", "Vercel"].map((tech) => (
+                 <span key={tech} className="px-2 py-1 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md text-xs font-mono text-zinc-600 dark:text-zinc-300">
+                   {tech}
+                 </span>
+               ))}
+             </div>
+           </div>
+        </div>
+
+        {/* Project 2: Nyaay AI */}
+        <div className="flex flex-col gap-4">
+           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+             <div className="flex items-center gap-3">
+               <h2 className="text-2xl font-bold">Nyaay AI</h2>
+               <Badge variant="secondary" className="text-xs font-normal">LegalTech Innovation</Badge>
+             </div>
+             <div className="flex gap-3 text-sm">
+               <a href="https://github.com/CriticalMalwareHacker/nyaay-AI" target="_blank" className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                 <ExternalLink size={16} /> View Project
+               </a>
+             </div>
+           </div>
+
+           <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+             A solution built during the <strong>#BuildandGrow hackathon</strong> to democratize legal access in India. This platform utilizes <strong>Google Gemini AI</strong> to analyze complex legal documents, provide risk assessment scores (0-100), and auto-generate legally sound contracts in 4 Indian languages (English, Hindi, Marathi, Telugu), bridging the gap between legal complexity and the common user.
+           </p>
+
+           <div className="bg-zinc-50 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
+             <h3 className="text-sm font-semibold mb-3 text-zinc-900 dark:text-zinc-100">Key Technical Features:</h3>
+             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-600 dark:text-zinc-400 mb-4">
+               <li className="flex items-center gap-2">🔹 Multilingual NLP & Document Translation</li>
+               <li className="flex items-center gap-2">🔹 AI Compliance Scoring Algorithms</li>
+               <li className="flex items-center gap-2">🔹 Automated Legal Document Drafting</li>
+               <li className="flex items-center gap-2">🔹 Google Docs Integration</li>
+             </ul>
+
+             <div className="flex flex-wrap gap-2 mt-2">
+               {["Next.js", "TypeScript", "Google Gemini AI", "Tailwind CSS", "Google Cloud Platform", "Prompt Engineering", "LegalTech"].map((tech) => (
+                 <span key={tech} className="px-2 py-1 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md text-xs font-mono text-zinc-600 dark:text-zinc-300">
+                   {tech}
+                 </span>
+               ))}
+             </div>
+           </div>
+        </div>
+
+        {/* Project 3: Blogy.tech */}
+        <div className="flex flex-col gap-4">
+           <div className="flex items-center gap-3">
+             <h2 className="text-2xl font-bold">Blogy.tech</h2>
+             <Badge variant="secondary" className="text-xs font-normal">Personal Branding</Badge>
+           </div>
+           
+           <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+             A highly optimized personal blogging platform currently in active development. Designed to be a central hub for sharing technical insights, tutorials, and project updates. Focuses on minimal design principles, high performance (Core Web Vitals), and SEO optimization to reach a wider developer audience.
+           </p>
+
+           <div className="bg-zinc-50 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
+             <div className="flex flex-wrap gap-2">
+               {["React", "Next.js", "MDX", "SEO Optimization", "Responsive Design", "Content Management", "Performance Tuning"].map((tech) => (
+                 <span key={tech} className="px-2 py-1 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md text-xs font-mono text-zinc-600 dark:text-zinc-300">
+                   {tech}
+                 </span>
+               ))}
+             </div>
+           </div>
+        </div>
       </div>
 
-      <h2 className="text-xl font-bold pb-8">Experience</h2>
+      {/* Expandable Section for Experience & Archive */}
+      <div>
+        <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+          Experience & Archive
+          <span className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1 ml-4"></span>
+        </h2>
+        
+        <Accordion type="single" collapsible className="w-full">
+          
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="text-lg">Roles at college</AccordionTrigger>
+            <AccordionContent>
+              <div className="space-y-8 pt-4 pl-2">
+                <div className="relative border-l-2 border-zinc-200 dark:border-zinc-800 pl-6 pb-2">
+                  <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-zinc-200 dark:bg-zinc-800"></div>
+                  <h3 className="font-bold text-lg">Head of UI/UX</h3>
+                  <p className="text-xs font-mono text-zinc-500 uppercase tracking-wide mb-2">Google Developer Group (GDG) MPSTME · Present</p>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                    Spearheading design initiatives and managing UI/UX strategies for community projects. Mentoring a team of junior designers and ensuring consistent design language across all GDG deliverables.
+                  </p>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem value="item-2">
+            <AccordionTrigger className="text-lg">Other Projects</AccordionTrigger>
+            <AccordionContent>
+               <ul className="space-y-4 pt-4 pl-4 list-disc text-sm text-zinc-600 dark:text-zinc-400 marker:text-zinc-300">
+                 <li>
+                   <strong>Neurotechh:</strong> A modern tech blog website built with Astro.js, Tailwind CSS, and Sanity CMS. Features a highly optimized landing page and newsletter integration. <a href="https://neurotechh.live/" className="text-blue-500 hover:underline ml-1">neurotechh.live</a>
+                 </li>
+                 <li>
+                   <strong>Project-Mirage:</strong> An interactive pixel art game and dynamic navbar developed collaboratively with the GDSC MPSTME community.
+                 </li>
+                 <li>
+                   <strong>Minor Capstone:</strong> A fully functional, responsive blog website architected using the MERN stack (MongoDB, Express, React, Node.js).
+                 </li>
+                 <li>
+                   <strong>Figma Prototypes:</strong> Extensive portfolio of high-fidelity website designs and seamless Figma-to-Code implementations (e.g., Team 105 website).
+                 </li>
+               </ul>
+            </AccordionContent>
+          </AccordionItem>
 
-      <h3 className="text-md font-semibold">Google Developers Group</h3>
-      <p className="text-sm">Dec'24 - Present · On-Campus Core Team Member</p>
-      <ul className="list-disc p-3">
-        <li>
-          Developed full-stack solutions using React (Next.js) and Svelte
-          (SvelteKit) for dynamic UIs.
-        </li>
-        <li>
-          Built RESTful APIs and microservices with Node.js and Go, integrated
-          with MongoDB, MySQL, and PostgreSQL.
-        </li>
-        <li>
-          Optimized database schemas, queries, and API performance for
-          scalability and reliability.
-        </li>
-        <li>
-          Ensured seamless front-end and back-end data integration through
-          RESTful and GraphQL APIs.
-        </li>
-        <li>
-          Implemented best practices in code quality, testing, and CI/CD
-          pipelines.
-        </li>
-        <li>
-          Collaborated on system architecture and tech stack decisions to
-          streamline development processes.
-        </li>
-      </ul>
+           <AccordionItem value="item-3">
+            <AccordionTrigger className="text-lg">Achievements & Volunteering</AccordionTrigger>
+            <AccordionContent>
+               <ul className="space-y-3 pt-4 text-sm text-zinc-600 dark:text-zinc-400 pl-2">
+                 <li className="flex items-start gap-2">
+                    <span className="text-lg">👥</span> 
+                    <span><strong>Lead Volunteer</strong> – First Tech Challenge 2025</span>
+                 </li>
+                 <li className="flex items-start gap-2">
+                    <span className="text-lg">🎨</span> 
+                    <span><strong>Standee, banner designs/volunteer</strong> – GDG Cloud Community Days Mumbai 2025</span>
+                 </li>
+                 <li className="flex items-start gap-2">
+                    <span className="text-lg">🏆</span> 
+                    <span><strong>Guinness World Record Holder</strong> – Mumbai Hacks 2024</span>
+                 </li>
+                 <li className="flex items-start gap-2">
+                    <span className="text-lg">🤝</span> 
+                    <span><strong>Techfest IIT Bombay 2024</strong> – Organizer/Volunteer</span>
+                 </li>
+                 <li className="flex items-start gap-2">
+                    <span className="text-lg">📧</span> 
+                    <span><strong>Global Opportunities Expo</strong> – Automating ticketing systems & bulk emails using Appscript & Mailgun.</span>
+                 </li>
+               </ul>
+            </AccordionContent>
+          </AccordionItem>
 
-      <h3 className="tetx-md font-semibold">{"<Undisclosed>"}</h3>
-      <p className="text-sm">Jan'24 Remote - Freelance</p>
-      <ul className="list-disc p-3">
-        <li>
-          Led the architecture design and implementation, ensuring scalability
-          and cost-effectiveness of the solution.
-        </li>
-        <li>
-          Developed a video upload feature with signed URLs for secure direct
-          uploads to Google Cloud Storage.
-        </li>
-        <li>
-          Utilized Cloud Pub/Sub for asynchronous processing of uploaded videos,
-          transcoding them to multiple formats using Cloud Run workers.
-        </li>
-        <li>
-          Stored video metadata in Firestore for efficient retrieval and display
-          in the web client.
-        </li>
-        <li>Utilized Cloud Run for user interaction in the web client.</li>
-        <li>
-          Collaborated with team members to address limitations and plan future
-          enhancements.
-        </li>
-      </ul>
-      <h3 className="tetx-md font-semibold">{"Physicswallah"}</h3>
-      <p className="text-sm">June'23 Remote - Part-time</p>
-      <ul className="list-disc p-3">
-        <li>
-          Implemented an app allowing teachers to solve student doubts with
-          features such as selecting slide numbers and lectures.
-        </li>
-        <li>
-          Integrated APIs to fetch student doubts and enhanced functionality
-          with OpenAI API for answer generation.
-        </li>
-        <li>
-          Developed multiple doubt resolution modes including voice recording,
-          picture upload, and text input.
-        </li>
-        <li>
-          Ensured seamless cross-platform functionality using React Native's
-          capabilities.
-        </li>
-        <li>
-          Collaborated with a senior engineer to develop key features and worked
-          closely with the team to design and implement components.
-        </li>
-        <li>
-          Contributed to user-friendly interfaces and engaged in discussions to
-          improve features, conducting testing and gathering feedback.
-        </li>
-      </ul>
-
-      <h2 className="text-xl font-bold py-8">Projects</h2>
-
-      <div className="">
-        todo: write about my projects here, meanwhile you can checkout my{" "}
-        <a href="/gh" className="link">
-          github
-        </a>{" "}
-        /{" "}
-        <a
-          href="/ln"
-          target="_blank"
-          className="link"
-          rel="noopener noreferrer"
-        >
-          linkedin
-        </a>
-        .
+        </Accordion>
       </div>
-      {/* 
-      <Table>
-        <TableCaption>A list of my projects.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Project</TableHead>
-            <TableHead className="text-right">Description</TableHead>
-            <TableHead className="text-right">Year</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {workData.map((item) => (
-            <TableRow key={item.title} className="w-full">
-              <TableCell className="font-medium">
-                <a
-                  href={item.link}
-                  target="_blank"
-                  className="link"
-                  rel="noopener noreferrer"
-                >
-                  {item.title}
-                </a>
-              </TableCell>
-              <TableCell
-                className="text-right"
-                dangerouslySetInnerHTML={{ __html: item.shortDesc }}
-              ></TableCell>
-              <TableCell className="text-right">{item.year}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-      */}
     </section>
   );
-};
-
-export default workPage;
+}
