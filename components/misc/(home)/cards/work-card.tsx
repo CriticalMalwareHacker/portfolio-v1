@@ -1,21 +1,29 @@
-import { Briefcase, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import workImg from "@/public/work.jpg";
 
 export const WorkCard = () => {
   return (
-    <Link href="/work" className="group h-full block">
-      <div className="flex flex-col justify-between h-full p-6 rounded-3xl bg-zinc-100 dark:bg-zinc-900 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800 transition-all duration-300">
-        <div className="flex justify-between items-start">
-          <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400">
-            <Briefcase size={24} />
+    <Link href="/work" className="group relative block w-full h-full overflow-hidden rounded-3xl">
+      <Image
+        src={workImg}
+        alt="Work"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-110 brightness-75 group-hover:brightness-90"
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-xl font-bold text-white">Featured Work</h3>
+            <p className="text-sm text-zinc-300 mt-1">
+              Projects, Startups & Code
+            </p>
           </div>
-          <ArrowUpRight className="text-zinc-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
-        </div>
-        <div className="mt-4">
-          <h3 className="text-lg font-medium">Work & Experience</h3>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-            FTC Supervisor, Developer's Club, and Freelance Projects.
-          </p>
+          <div className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white group-hover:bg-white/20 transition-colors">
+            <ArrowUpRight size={20} />
+          </div>
         </div>
       </div>
     </Link>

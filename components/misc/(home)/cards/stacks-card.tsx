@@ -1,112 +1,80 @@
 import {
+  IconCloudflare,
+  SkillIconsDocker as IconDocker,
   IconFigma,
+  IconFirebase,
   IconGit,
+  SkillIconsGolang as IconGolang,
+  SkillIconsGraphqlDark as IconGraphql,
   IconMySQL,
   IconNextJS,
   IconNodeJS,
   IconPostgres,
+  IconPrisma,
   IconPython,
   IconReactJS,
   IconTailwindcss,
   IconTypescript,
+  IconVite,
+  LogosVisualStudioCode as IconVsCode,
+  VscodeIconsFileTypeCpp3 as IconCpp,
 } from "@/components/icons";
-import { cn } from "@/lib/utils";
-import type React from "react";
+import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 
-// ... Keep existing MarqueeProps, range function, and Marquee component ...
-type MarqueeProps = {
-  children: React.ReactNode;
-  direction?: "left" | "up";
-  pauseOnHover?: boolean;
-  reverse?: boolean;
-  fade?: boolean;
-  className?: string;
-};
-
-const range = (start: number, end: number): number[] =>
-  Array.from({ length: end - start }, (_, k) => k + start);
-
-const Marquee = (props: MarqueeProps) => {
-    const {
-        children,
-        direction = "left",
-        pauseOnHover = false,
-        reverse = false,
-        fade = false,
-        className,
-      } = props;
-    
-      const ifToRightOrToBottom = (direction: string) => {
-        if (direction === "left") {
-          return "to right";
-        } else {
-          return "to bottom";
-        }
-      };
-    
-      return (
-        <div
-          className={cn(
-            "group flex gap-4 overflow-hidden",
-            direction === "left" ? "flex-row" : "flex-col",
-            className,
-          )}
-          data-testid="marquee"
-          style={{
-            maskImage: fade
-              ? `linear-gradient(${
-                  ifToRightOrToBottom(direction)
-                  // direction === "left" ? "to right" : "to bottom"
-                }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
-              : undefined,
-            WebkitMaskImage: fade
-              ? `linear-gradient(${
-                  ifToRightOrToBottom(direction)
-                  // direction === "left" ? "to right" : "to bottom"
-                }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
-              : undefined,
-          }}
-        >
-          {range(0, 2).map((i) => (
-            <div
-              key={i}
-              className={cn(
-                "flex shrink-0 justify-around gap-4 [--gap:1rem]",
-                direction === "left"
-                  ? "animate-marquee-left flex-row"
-                  : "animate-marquee-up flex-col",
-                pauseOnHover && "group-hover:[animation-play-state:paused]",
-                reverse && "direction-reverse",
-              )}
-              data-testid={`marquee-child-${i + 1}`}
-            >
-              {children}
-            </div>
-          ))}
-        </div>
-      );
+const TechItem = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-zinc-200/50 dark:bg-white/5 backdrop-blur-md border border-zinc-200/50 dark:border-white/10 shadow-sm transition-transform duration-300 hover:scale-110">
+      <div className="h-7 w-7 text-zinc-700 dark:text-zinc-200 flex items-center justify-center">
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export const StacksCard = () => {
   return (
-    <div className="p-4 flex h-full flex-col gap-4 overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-900 mt-4 md:mt-0">
-       <div className="text-sm font-medium text-zinc-500 dark:text-zinc-400 px-2">
-         Tech Stack
-       </div>
-      <Marquee className="py-2" fade pauseOnHover>
-        <IconTypescript width="40" height="40" />
-        <IconReactJS width="40" height="40" />
-        <IconNextJS width="40" height="40" />
-        <IconTailwindcss width="40" height="40" />
-        <IconPython width="40" height="40" />
-      </Marquee>
-      <Marquee className="py-2" reverse fade pauseOnHover>
-        <IconNodeJS width="40" height="40" />
-        <IconMySQL width="40" height="40" />
-        <IconPostgres width="40" height="40" />
-        <IconFigma width="40" height="40" />
-        <IconGit width="40" height="40" />
-      </Marquee>
+    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50">
+      
+      {/* Background Grid Pattern with Strong Radial Fade */}
+      <div 
+        className="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-50"
+        style={{
+          maskImage: "radial-gradient(circle at center, black 30%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(circle at center, black 30%, transparent 80%)",
+        }}
+      ></div>
+      
+      {/* Container for Sliders */}
+      <div className="flex h-full w-full flex-col justify-center gap-8 py-8">
+        
+        {/* Row 1: Languages & Frameworks */}
+        <InfiniteSlider gap={24} duration={40}>
+          <TechItem><IconTypescript /></TechItem>
+          <TechItem><IconPython /></TechItem>
+          <TechItem><IconGolang /></TechItem>
+          <TechItem><IconCpp /></TechItem>
+          <TechItem><IconNextJS /></TechItem>
+          <TechItem><IconReactJS /></TechItem>
+          <TechItem><IconNodeJS /></TechItem>
+          <TechItem><IconTailwindcss /></TechItem>
+          <TechItem><IconFigma /></TechItem>
+          <TechItem><IconVite /></TechItem>
+        </InfiniteSlider>
+
+        {/* Row 2: Tools, Backend & Design (Reverse) */}
+        <InfiniteSlider gap={24} duration={50} reverse>
+          <TechItem><IconPostgres /></TechItem>
+          <TechItem><IconMySQL /></TechItem>
+          <TechItem><IconDocker /></TechItem>
+          <TechItem><IconGit /></TechItem>
+          <TechItem><IconPrisma /></TechItem>
+          <TechItem><IconGraphql /></TechItem>
+          <TechItem><IconFirebase /></TechItem>
+          <TechItem><IconVsCode /></TechItem>
+          <TechItem><IconCloudflare /></TechItem>
+        </InfiniteSlider>
+
+      </div>
     </div>
   );
 };

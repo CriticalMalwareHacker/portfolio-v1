@@ -6,7 +6,6 @@ export * from "./current-time";
 export * from "./dc-status";
 export * from "./gh-link";
 export * from "./gh-stats";
-export * from "./images-card";
 export * from "./links-card";
 export * from "./locate-me";
 export * from "./music-card";
