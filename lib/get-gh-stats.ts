@@ -1,8 +1,17 @@
+import { env } from "@/app/env";
 import { octokit } from "@/lib/octokit";
 import { unstable_cache as cache } from "next/cache";
 
 export const getGHStats = cache(
   async () => {
+    if (!env.GITHUB_TOKEN) {
+      return {
+        issues: 0,
+        prs: 0,
+        followers: 0,
+        stars: 0,
+      };
+    }
     const gql = String.raw;
     const { user } = await octokit.graphql<{
       user: {

@@ -6,42 +6,37 @@ export const Intro = () => {
     <section className="mt-8 text-zinc-600 dark:text-zinc-400">
       <div className="space-y-5">
         <p>
-          hi, i'm arunava (a.k.a
+          hey! i'm tanay (a.k.a
           <a
             className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
-            href="https://www.vimfn.in/alias"
+            href="https://github.com/CriticalMalwareHacker"
           >
-            vimfn
+            CriticalMalwareHacker
           </a>{" "}
-          on the internet) currently a cs undergrad at [redacted], my interests
-          include compilers, computer networks, and ctfs.
+          on the internet) currently a IT undergrad at NMIMS MPSTME, my interests
+          include web dev, ui/ux maybe a bit of game dev, cloud and ai.
         </p>
         <p>
-          beyond my studies, i enjoy my time playing chess, jamming to music,
-          modding factorio or just tinkering with stuff to understand how they
-          work.
+          hobbies including, gaming, yt, listening to 
+          <a
+            className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
+            href="https://music.youtube.com/channel/UCCRZPOREOBQnL-AKB8UqNeg?si=X1b90xbg7MSRj7LK"
+          >
+            music
+          </a>{" "}
+          ,
+          running, cycling, trying things that are interesting etc.
         </p>
         <p>
-          ps i love simplicity and a great admirer of unix philosophy,
-          minimalism and hacker ethics.
+          I like things that are simplistic as well as something completely abstract, retro like
+        </p>
+        <p>
+          I primarily use next.js for frontend and figma for UI/UX.
         </p>
         <br />
-        🚧 note: this site isn't ready yet, you should better be visting
-        <a
-          className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
-          href="https://www.vimfn.in"
-        >
-          vimfn.in
-        </a> for any info.
+        ps. the site is a work in progress
         <br />
         <div>
-          <Link
-            href="/notes"
-            className="inline-flex link text-black relative dark:text-white/95"
-          >
-            notes{" "}
-            <ArrowUpRight size={10} className="mt-1 ml-[2px] items-center" />
-          </Link>
           <Link
             href="/work"
             className="ml-2 inline-flex link text-black relative dark:text-white/95"
@@ -65,23 +60,23 @@ export const Intro = () => {
         ></path>
       </svg>
       <div>
-        feel free to reach me out at
+        reach me out at
         <a
           className="link text-black dark:text-white/95 mx-1 underline underline-offset-auto"
-          href="http://x.com/vimfnx"
+          href="https://x.com/Criticalmalware"
           target="_blank"
           rel="noopener noreferrer"
         >
           x.com
         </a>
-        or drop an
         <a
-          className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
-          href="mailto:hi@vimfn.in"
+          className="link text-black dark:text-white/95 mx-1 underline underline-offset-auto"
+          href="mailto:you@criticalmalware123@gmail.com?subject=Inquiry&body=Hello"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           email
         </a>
-        .
       </div>
     </section>
   );

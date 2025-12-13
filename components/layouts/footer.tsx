@@ -1,4 +1,3 @@
-import { Emoji } from "@/components/misc/emoji";
 import { clsx } from "clsx";
 import type { ComponentProps } from "react";
 
@@ -23,7 +22,6 @@ export const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
       <hr className="w-full border-t border-zinc-150 dark:border-zinc-800" />
       <div className="flex items-center pt-2">
         <span>
-          <Emoji />{" "}
           <time className="hidden sm:inline" dateTime={String(year)}>
             {year}{" "}
           </time>
@@ -32,10 +30,10 @@ export const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
         </span>
         <a
           className="link ml-auto inline-flex items-center gap-1.5"
-          href="https://github.com/vimfn/www"
+          href="https://github.com/CriticalMalwareHacker"
           rel="noreferrer"
           target="_blank"
-        >
+        > 
           <svg
             className="translate-y-px"
             height="22"
@@ -50,7 +48,7 @@ export const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
             />
           </svg>
           <span>
-            <span>vimfn.in</span>
+            <span>github</span>
             <span className="hidden text-zinc-350 dark:text-[#898992] sm:inline">
               #{commit}
             </span>
