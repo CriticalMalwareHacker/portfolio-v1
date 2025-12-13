@@ -1,4 +1,6 @@
 "use client";
+
+import { capitalize } from "@/lib/utils";
 import { formatDistanceToNowStrict } from "date-fns";
 import type { ComponentProps } from "react";
 import { useMemo } from "react";
