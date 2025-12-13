@@ -4,7 +4,6 @@ export * from "./animelink-card";
 export * from "./books-card";
 export * from "./current-time";
 export * from "./gh-link";
-export * from "./gh-stats";
 export * from "./links-card";
 export * from "./locate-me";
 export * from "./music-card";
