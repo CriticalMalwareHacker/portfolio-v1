@@ -1,53 +1,26 @@
-import {
-  AnimeLinkCard,
-  BooksCard,
-  DCStatus,
-  GHLink,
-  GHStats,
-  ImagesCard,
-  LinksCard,
-  MusicCard,
-  StacksCard,
-  WakatimeStats,
-} from "@/components/misc/(home)/cards";
+import { LinksCard } from "@/components/misc/(home)/cards/links-card";
+import { StacksCard } from "@/components/misc/(home)/cards/stacks-card";
+// Import the new cards directly
+import { ResumeCard } from "./cards/resume-card";
 
 export const GridCards = () => {
   return (
-    <div>
-      <div className="grid md:grid-cols-6 grid-cols-3 mt-8 gap-3">
-        <div className="col-span-3">
-          <GHLink />
-        </div>
-        <div className="col-span-2">
-          <GHStats />
-        </div>
-        <MusicCard />
+    <div className="mt-8">
+      {/* Top Row: Work and Resume */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-48 md:h-52">
+        <ResumeCard />
       </div>
 
-      <div className="grid md:grid-cols-6 grid-cols-3 mt-3">
-        <div className="flex flex-col col-span-3">
-          <div className="flex gap-3">
-            <div className="w-24">
-              <AnimeLinkCard />
-            </div>
-            <div className="flex flex-col gap-3 w-full ">
-              <LinksCard />
-              <WakatimeStats />
-            </div>
-          </div>
-
-          <div className="cols-span-3 ">
-            <StacksCard />
-          </div>
+      {/* Bottom Row: Links and Tech Stack */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        {/* Links takes up 1 column on desktop */}
+        <div className="md:col-span-1 h-40">
+           <LinksCard />
         </div>
-
-        <div className="col-span-3 md:ml-3">
-          <div className="flex gap-3 ">
-            <DCStatus />
-
-            <ImagesCard />
-          </div>
-          <BooksCard />
+        
+        {/* Stacks takes up 2 columns on desktop */}
+        <div className="md:col-span-2 h-40">
+           <StacksCard />
         </div>
       </div>
     </div>

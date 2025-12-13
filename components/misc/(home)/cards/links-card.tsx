@@ -1,26 +1,25 @@
-import { RiTwitterXFill } from "@/components/icons";
-import { CalendarDays, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export const LinksCard = () => {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-4 h-full">
       <a
-        href="http://linkedin.com/in/vimfn"
+        href="https://www.linkedin.com/in/tanay-kumar-5995b4288/"
         target="_blank"
-        className="hover:scale-95 duration-500 transform-gpu h-[4.125rem] flex flex-col justify-center items-center rounded-lg text-white bg-[#2867b2] w-full "
+        className="hover:scale-95 duration-500 transform-gpu flex-1 flex flex-col justify-center items-center rounded-2xl text-white bg-[#0A66C2] p-4 transition-all"
         rel="noreferrer"
       >
-        <Linkedin />
-        <p className="text-[12px] text-white/90 -rotate-3">(serious stuff)</p>
+        <Linkedin size={32} />
+        <p className="text-xs text-white/90 mt-2 font-medium">LinkedIn</p>
       </a>
       <a
-        href="http://x.com/vimfnx"
+        href="https://github.com/CriticalMalwareHacker"
         target="_blank"
-        className="hover:scale-95 duration-500 transform-gpu h-[4.125rem] flex flex-col justify-center items-center rounded-lg text-white bg-[#1c1d1f] w-full"
+        className="hover:scale-95 duration-500 transform-gpu flex-1 flex flex-col justify-center items-center rounded-2xl text-white bg-[#171515] p-4 transition-all"
         rel="noreferrer"
       >
-        <RiTwitterXFill className="text-2xl" />
-        <p className="text-[12px] text-white/55 -rotate-3">(share memes)</p>
+        <Github size={32} />
+        <p className="text-xs text-white/90 mt-2 font-medium">GitHub</p>
       </a>
     </div>
   );

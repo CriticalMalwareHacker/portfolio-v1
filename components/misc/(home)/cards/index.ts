@@ -1,12 +1,15 @@
-export * from "./images-card";
-export * from "./gh-stats";
+// components/misc/(home)/cards/index.ts
+
 export * from "./animelink-card";
-export * from "./dc-status";
-export * from "./locate-me";
-export * from "./wakatime-stats";
-export * from "./current-time";
-export * from "./stacks-card";
-export * from "./music-card";
-export * from "./links-card";
-export * from "./gh-link";
 export * from "./books-card";
+export * from "./current-time";
+export * from "./dc-status";
+export * from "./gh-link";
+export * from "./gh-stats";
+export * from "./images-card";
+export * from "./links-card";
+export * from "./locate-me";
+export * from "./music-card";
+export * from "./stacks-card";
+export * from "./wakatime-stats";
+// REMOVED: export * from "./contact-card";
