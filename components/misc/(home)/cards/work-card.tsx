@@ -18,7 +18,7 @@ export const WorkCard = () => {
           <div>
             <h3 className="text-xl font-bold text-white">Featured Work</h3>
             <p className="text-sm text-zinc-300 mt-1">
-              Projects, Startups & Code
+              Projects, etc.
             </p>
           </div>
           <div className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white group-hover:bg-white/20 transition-colors">

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 type NavItem = {
   name: string;
   href: string;
@@ -14,7 +13,7 @@ const navItems: NavItem[] = [
   { name: "-_-", href: "/" },
   { name: "work", href: "/work" },
   // Updated to point to your CV file
-  { name: "resume", href: "/Tanay_Kumar_CV.pdf", target: "_blank" },
+  { name: "resume", href: "/Tanay_resume.pdf", target: "_blank" },
 ];
 
 const NavBar = () => {
