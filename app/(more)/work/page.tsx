@@ -107,7 +107,8 @@ export default function WorkPage() {
              </div>
            </div>
            
-           <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+           <p className="tn
+           ext-zinc-600 dark:text-zinc-300 leading-relaxed">
              A highly optimized personal blogging platform currently in active development. Designed to be a central hub for sharing technical insights, tutorials, and project updates. Focuses on minimal design principles, high performance (Core Web Vitals), and SEO optimization to reach a wider developer audience.
            </p>
 
