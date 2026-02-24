@@ -58,35 +58,38 @@ export default function WorkPage() {
            </div>
         </div>
 
-        {/* Project 2: Nyaay AI */}
+        {/* Project 2: Dexterity UI */}
         <div className="flex flex-col gap-4">
            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
              <div className="flex items-center gap-3">
-               <h2 className="text-2xl font-bold">Nyaay AI</h2>
-               <Badge variant="secondary" className="text-xs font-normal">LegalTech Innovation</Badge>
+               <h2 className="text-2xl font-bold">Dexterity UI</h2>
+               <Badge variant="secondary" className="text-xs font-normal">Component Library</Badge>
              </div>
              <div className="flex gap-3 text-sm">
-               <a href="https://github.com/CriticalMalwareHacker/nyaay-AI" target="_blank" className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                 <ExternalLink size={16} /> View Project
+               <a href="https://dexterityui.vercel.app/" target="_blank" className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                 <ExternalLink size={16} /> Live Demo
+               </a>
+               <a href="https://github.com/CriticalMalwareHacker/ui-components" target="_blank" className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                 <Github size={16} /> Repository
                </a>
              </div>
            </div>
 
            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-             A solution built during the <strong>#BuildandGrow hackathon</strong> to democratize legal access in India. This platform utilizes <strong>Google Gemini AI</strong> to analyze complex legal documents, provide risk assessment scores (0-100), and auto-generate legally sound contracts in 4 Indian languages (English, Hindi, Marathi, Telugu), bridging the gap between legal complexity and the common user.
+             A modern, accessible UI component library built with React and Tailwind CSS. Dexterity UI provides a comprehensive collection of pre-built components designed to accelerate development workflows. Features seamless integration with TypeScript, extensive customization options, and production-ready components for building responsive web applications.
            </p>
 
            <div className="bg-zinc-50 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
              <h3 className="text-sm font-semibold mb-3 text-zinc-900 dark:text-zinc-100">Key Technical Features:</h3>
              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-600 dark:text-zinc-400 mb-4">
-               <li className="flex items-center gap-2">🔹 Multilingual NLP & Document Translation</li>
-               <li className="flex items-center gap-2">🔹 AI Compliance Scoring Algorithms</li>
-               <li className="flex items-center gap-2">🔹 Automated Legal Document Drafting</li>
-               <li className="flex items-center gap-2">🔹 Google Docs Integration</li>
+               <li className="flex items-center gap-2">🔹 Accessible React Components</li>
+               <li className="flex items-center gap-2">🔹 Tailwind CSS Integration</li>
+               <li className="flex items-center gap-2">🔹 TypeScript Support</li>
+               <li className="flex items-center gap-2">🔹 Responsive Design System</li>
              </ul>
 
              <div className="flex flex-wrap gap-2 mt-2">
-               {["Next.js", "TypeScript", "Google Gemini AI", "Tailwind CSS", "Google Cloud Platform", "Prompt Engineering", "LegalTech"].map((tech) => (
+               {["React", "TypeScript", "Tailwind CSS", "Component Library", "Responsive Design", "Accessibility"].map((tech) => (
                  <span key={tech} className="px-2 py-1 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md text-xs font-mono text-zinc-600 dark:text-zinc-300">
                    {tech}
                  </span>

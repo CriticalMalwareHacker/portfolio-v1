@@ -17,6 +17,16 @@ export const Intro = () => {
           include web dev, ui/ux maybe a bit of game dev, cloud and ai.
         </p>
         <p>
+          Building 
+          <a
+            className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
+            href="https://dexterityui.vercel.app/"
+          >
+            Dexterity UI 
+          </a>{" "}
+           Currently
+        </p>
+        <p>
           hobbies including, gaming, yt, listening to 
           <a
             className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
