@@ -26,6 +26,15 @@ export const Intro = () => {
           </a>{" "}
            Currently
         </p>
+     <p>
+          A self hosted
+          <a
+            className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
+            href="https://clipboard-948231976248.asia-south1.run.app"
+          >
+            clipboard
+          </a>
+        </p>
         <p>
           hobbies including, gaming, yt, listening to 
           <a
