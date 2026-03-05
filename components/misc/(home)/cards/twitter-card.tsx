@@ -5,7 +5,7 @@ import twitter from "@/public/x.jpg";
 export const TwitterCard = () => {
   return (
     <a
-      href="http://x.com/CriticalMalwareHacker"
+      href="https://x.com/Criticalmalware"
       target="_blank"
       rel="noopener noreferrer"
       className="group relative block w-full h-full overflow-hidden rounded-3xl"

@@ -26,14 +26,15 @@ export const Intro = () => {
           </a>{" "}
            Currently
         </p>
-     <p>
+        <p>
           A self hosted
           <a
             className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
             href="https://clipboard-948231976248.asia-south1.run.app"
           >
-            clipboard
-          </a>
+            clipboard.
+          </a>{" "}
+          Made with TanStack and Convex, hosted on cloud run
         </p>
         <p>
           hobbies including, gaming, yt, listening to 
@@ -52,9 +53,6 @@ export const Intro = () => {
         <p>
           I primarily use next.js for frontend and figma for UI/UX.
         </p>
-        <br />
-        ps. the site is a work in progress
-        <br />
         <div>
           <Link
             href="/work"
