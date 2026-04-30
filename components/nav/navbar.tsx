@@ -12,8 +12,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { name: "-_-", href: "/" },
   { name: "work", href: "/work" },
-  // Updated to point to your CV file
-  { name: "resume", href: "/Tanay_resume.pdf", target: "_blank" },
+  { name: "resume", href: "/tanayCV.pdf", target: "_blank" },
 ];
 
 const NavBar = () => {

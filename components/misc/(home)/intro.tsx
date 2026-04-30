@@ -13,8 +13,9 @@ export const Intro = () => {
           >
             CriticalMalwareHacker
           </a>{" "}
-          on the internet) currently a IT undergrad at NMIMS MPSTME, my interests
-          include web dev, ui/ux maybe a bit of game dev, cloud and ai.
+          on the internet) currently an IT undergrad at NMIMS MPSTME and ex-intern
+          at ActuallyFair. my interests include web dev, ui/ux maybe a bit of
+          game dev, cloud and ai.
         </p>
         <p>
           Building 

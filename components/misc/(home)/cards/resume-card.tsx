@@ -5,7 +5,7 @@ import booksImg from "@/public/resume.png";
 export const ResumeCard = () => {
   return (
     <a
-      href="/Tanay_resume.pdf"
+      href="/tanayCV.pdf"
       target="_blank"
       rel="noopener noreferrer"
       download
